@@ -1,0 +1,105 @@
+<div>
+<form [formGroup]="invoiceForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="type">Type:</label>
+      <input id="type" formControlName="type">
+      <div *ngIf="invoiceForm.get('type')?.invalid && (invoiceForm.get('type')?.dirty || invoiceForm.get('type')?.touched)">
+        <div *ngIf="invoiceForm.get('type')?.errors?.['required']">
+          Type is required.
+        </div>
+      </div>
+    </div>
+  
+    <div>
+      <label for="FromCompany">From Company:</label>
+      <input id="FromCompany" formControlName="FromCompany">
+      <div *ngIf="invoiceForm.get('FromCompany')?.invalid && (invoiceForm.get('FromCompany')?.dirty || invoiceForm.get('FromCompany')?.touched)">
+        <div *ngIf="invoiceForm.get('FromCompany')?.errors?.['required']">
+          From Company is required.
+        </div>
+      </div>
+    </div>
+  
+    <div>
+      <label for="InvoiceDate">Invoice Date:</label>
+      <input id="InvoiceDate" formControlName="InvoiceDate" type="date">
+      <div *ngIf="invoiceForm.get('InvoiceDate')?.invalid && (invoiceForm.get('InvoiceDate')?.dirty || invoiceForm.get('InvoiceDate')?.touched)">
+        <div *ngIf="invoiceForm.get('InvoiceDate')?.errors?.['required']">
+          Invoice Date is required.
+        </div>
+      </div>
+    </div>
+  
+    <div>
+      <label for="InvoiceNumber">Invoice Number:</label>
+      <input id="InvoiceNumber" formControlName="InvoiceNumber">
+      <div *ngIf="invoiceForm.get('InvoiceNumber')?.invalid && (invoiceForm.get('InvoiceNumber')?.dirty || invoiceForm.get('InvoiceNumber')?.touched)">
+        <div *ngIf="invoiceForm.get('InvoiceNumber')?.errors?.['required']">
+          Invoice Number is required.
+        </div>
+      </div>
+    </div>
+  
+    <div>
+      <label for="DueDate">Due Date:</label>
+      <input id="DueDate" formControlName="DueDate" type="date">
+      <div *ngIf="invoiceForm.get('DueDate')?.invalid && (invoiceForm.get('DueDate')?.dirty || invoiceForm.get('DueDate')?.touched)">
+        <div *ngIf="invoiceForm.get('DueDate')?.errors?.['required']">
+          Due Date is required.
+        </div>
+      </div>
+    </div>
+  
+    <div>
+      <label for="Reference">Reference:</label>
+      <input id="Reference" formControlName="Reference">
+    </div>
+  
+    <div>
+      <label for="PONumber">PO Number:</label>
+      <input id="PONumber" formControlName="PONumber">
+    </div>
+  
+    <div>
+      <label for="PaymentTerms">Payment Terms:</label>
+      <input id="PaymentTerms" formControlName="PaymentTerms">
+    </div>
+  
+    <div>
+      <label for="CustomerAccountNumber">Customer Account Number:</label>
+      <input id="CustomerAccountNumber" formControlName="CustomerAccountNumber">
+    </div>
+  
+    <div>
+      <label for="InvoiceAmount">Invoice Amount:</label>
+      <input id="InvoiceAmount" formControlName="InvoiceAmount">
+    </div>
+  
+    <div>
+      <label for="TotalTax">Total Tax:</label>
+      <input id="TotalTax" formControlName="TotalTax">
+    </div>
+  
+    <div>
+      <label for="TotalAmount">Total Amount:</label>
+      <input id="TotalAmount" formControlName="TotalAmount">
+    </div>
+  
+    <div>
+      <label for="Currency">Currency:</label>
+      <input id="Currency" formControlName="Currency">
+    </div>
+  
+    <button type="submit"  >Add Invoice</button>
+
+  </form>
+
+  
+  <ul>
+    <li *ngFor="let item of invoices$ | async">
+      Type: {{ item.type }}<br>
+    </li>
+  </ul>
+  <button>click</button>
+ </div>
+  
