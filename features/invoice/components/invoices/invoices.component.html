@@ -1,0 +1,63 @@
+<form [formGroup]="invoiceForm"  >
+    <div class="row">
+      <div class="col-md-7">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">From Company</th>
+              <th scope="col">Invoice Date</th>
+              <th scope="col">Invoice Number</th>
+              <th scope="col">PO Number</th>
+              <th scope="col">Process</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let invoice of invoices$ | async; let i = index">
+              <td>{{ invoice.FromCompany }}</td>
+              <td>{{ invoice.InvoiceDate | date }}</td>
+              <td>{{ invoice.InvoiceNumber }}</td>
+              <td>{{ invoice.PONumber }}</td>
+              <td><button class="btn btn-primary" (click)="processinvoice(invoice)">Process</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-5">
+        <div class="row">
+          <label class="form-label" for="customFile">Upload Invoice</label>
+          <input type="file" class="form-control" id="invoiceFile" formControlName="invoiceFileName" (change)="onFileChange($event)" />
+          <div *ngIf="filePreview">
+            <h5>File Preview:</h5>
+            <img *ngIf="fileType?.startsWith('image')" [src]="filePreview" class="img-fluid" alt="File preview" />
+            <iframe *ngIf="fileType === 'application/pdf'" [src]="filePreview" class="pdf-preview"></iframe>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="mb-3">
+              <label for="InvoiceNumber" class="form-label">Invoice Number</label>
+              <input type="text" class="form-control" id="invoiceNumber" formControlName="InvoiceNumber">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="mb-3">
+              <label for="InvoiceDate" class="form-label">Invoice Date</label>
+              <input type="text" class="form-control" id="invoiceDate" formControlName="InvoiceDate">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="mb-3">
+              <label for="PONumber" class="form-label">Purchase Number</label>
+              <input type="text" class="form-control" id="PONumber" formControlName="PONumber">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button class="btn btn-primary" type="submit">Add Invoice</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  

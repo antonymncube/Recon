@@ -1,0 +1,36 @@
+ .invoice{
+    border: 0.4px orange solid;
+    padding:2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+    background-color:#FFFFFF   ;
+ }
+ .invoiceForm{
+  display: flex;
+  flex-direction: column;
+ }
+
+   
+  
+  
+  .invoiceForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  mat-form-field {
+    width: 17% !important;
+    height: 10% !important;
+  }
+  
+  .block {
+    display: flex;  
+    flex-wrap: wrap;  
+    gap: 3px;  
+  }
+  
+  .mat-form-field {
+    flex: 1 1 200px;  
+  }
+  
