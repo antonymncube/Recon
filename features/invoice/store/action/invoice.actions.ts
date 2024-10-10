@@ -16,5 +16,21 @@ export const addInvoice = createAction(
     '[Invoice] Add Invoice Failure',
     props<{ error: any }>()  
   );
+
+  export const loadInvoices = createAction(
+    '[Invoice] Load Invoices'
+  );
+  
+  
+  export const loadInvoicesSuccess = createAction(
+    '[Invoice] Load Invoices Success',
+    props<{ invoices: InvoiceData[] }>()   
+  );
+  
+ 
+  export const loadInvoicesFailure = createAction(
+    '[Invoice] Load Invoices Failure',
+    props<{ error: any }>()   
+  );
  
   

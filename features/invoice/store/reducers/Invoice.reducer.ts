@@ -2,7 +2,7 @@
 import { createReducer, on, Action } from '@ngrx/store';
  
 import { InvoiceState } from '../../../types/invoice.state';
-import { addInvoice, addInvoiceFailure, addInvoiceSuccess } from '../action/invoice.actions';
+import { addInvoice, addInvoiceFailure, addInvoiceSuccess, loadInvoices, loadInvoicesFailure, loadInvoicesSuccess } from '../action/invoice.actions';
  
 const initialState: InvoiceState = {
   invoices: [],
@@ -12,6 +12,21 @@ const initialState: InvoiceState = {
 
 const invoiceReducer = createReducer(
   initialState,
+  on(loadInvoices, (state) => ({
+    ...state,
+    loading: true,    
+    error: null        
+  })),
+  on(loadInvoicesSuccess, (state, { invoices }) => ({
+    ...state,
+    invoices: invoices,  
+    loading: false     
+  })),
+  on(loadInvoicesFailure, (state, { error }) => ({
+    ...state,
+    loading: false,    
+    error: error       
+  })),
   on(addInvoice, state => ({
     ...state,
     loading: true,
@@ -33,4 +48,4 @@ export function reducer(state: InvoiceState | undefined, action: Action) {
   return invoiceReducer(state, action);
 }
 
-export { invoiceReducer };  // Ensure this line is present
+export { invoiceReducer };   

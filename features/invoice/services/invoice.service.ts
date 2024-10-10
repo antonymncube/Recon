@@ -14,4 +14,8 @@ export class InvoiceService {
   postInvoice(invoice: InvoiceData): Observable<InvoiceData> {
     return this.http.post<InvoiceData>(this.apiUrl, invoice);
   }
+
+  getInvoice(){
+    return this.http.get<InvoiceData[]>(this.apiUrl);
+  }
 }

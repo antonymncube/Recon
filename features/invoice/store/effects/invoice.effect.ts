@@ -3,7 +3,7 @@ import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { InvoiceService } from '../../services/invoice.service';
 import { catchError, map, mergeMap, tap } from 'rxjs/operators';
 import { of } from 'rxjs';
-import { addInvoice, addInvoiceFailure, addInvoiceSuccess } from '../action/invoice.actions';
+import { addInvoice, addInvoiceFailure, addInvoiceSuccess, loadInvoices, loadInvoicesFailure, loadInvoicesSuccess } from '../action/invoice.actions';
 
 @Injectable()
 export class InvoiceEffects {
@@ -13,6 +13,21 @@ export class InvoiceEffects {
     private actions$: Actions
   ) {}
 
+  loadInvoices$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(loadInvoices),  
+      mergeMap(() =>
+        this.invoiceService.getInvoice().pipe(  
+          map(invoices => loadInvoicesSuccess({ invoices })),  
+          catchError(error => {
+            console.error('Failed to load invoices:', error); 
+            return of(loadInvoicesFailure({ error }));  
+          })
+        )
+      )
+    )
+  );
+  
   addInvoice$ = createEffect(() =>
     this.actions$.pipe(
       ofType(addInvoice),
@@ -26,6 +41,7 @@ export class InvoiceEffects {
           })
         )
       )
+      
     )
   );
 }

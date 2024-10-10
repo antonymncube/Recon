@@ -6,11 +6,11 @@ import { catchError } from 'rxjs/operators';
 import { Supplier } from '../Types/supplier.state';
 
 @Injectable({
-  providedIn: 'root' // This makes the service available application-wide
+  providedIn: 'root'  
 })
 export class SupplierService {
 
-  private apiUrl = 'http://localhost:3000/suppliers'; // Replace with your API URL
+  private apiUrl = 'http://localhost:3000/suppliers';  
 
   constructor(private http: HttpClient) {}
 

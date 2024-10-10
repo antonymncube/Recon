@@ -6,6 +6,7 @@ export interface LineItem {
   }
   
   export interface InvoiceData {
+    id: string; 
     type: string;
     FromCompany: string;
     InvoiceDate: Date;
@@ -20,9 +21,19 @@ export interface LineItem {
     TotalTax: string;
     TotalAmount: string;
     Currency: string;
+    invoiceFileName:string;
+    invoiceFileBase64: string;
+    
   }
 
   export interface InvoicePostResponse {
-    id: string; // Or any other unique identifier returned by the API
-    message: string; // Or other relevant information
+    id: string;  
+    message: string;  
+  }
+
+  export interface Item {
+    name: string;
+    quantity: number;
+    price: number;
+    total?: number;  
   }

@@ -6,23 +6,28 @@ import { Observable } from 'rxjs';
 import { selectInvoices } from '../../store/selectors/invoice.selectors';
 import { loadInvoices } from '../../store/action/invoice.actions';
 import { Router } from '@angular/router';
-import { FormBuilder, FormGroup, FormGroupName, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-invoices',
   templateUrl: './invoices.component.html',
-  styleUrl: './invoices.component.scss'
+  styleUrls: ['./invoices.component.scss']
 })
 export class InvoicesComponent implements OnInit {
-  
+
   invoices$!: Observable<InvoiceData[]>;
   invoiceForm!: FormGroup;
   filePreview: SafeResourceUrl | null = null;
   fileType: string | null = null;  
-   
+  fileBase64: string | null = null; // To store the Base64 encoded image data
 
-  constructor(private store: Store<AppState>,private router : Router,private fb : FormBuilder, private sanitizer: DomSanitizer) {
+  constructor(
+    private store: Store<AppState>,
+    private router: Router,
+    private fb: FormBuilder,
+    private sanitizer: DomSanitizer
+  ) {
     this.invoiceForm = this.fb.group({
       type: ['Invoice', Validators.required],
       FromCompany: ['', Validators.required],
@@ -34,29 +39,27 @@ export class InvoicesComponent implements OnInit {
       PaymentTerms: [''],
       CustomerAccountNumber: [''],
       LineItems: [[]],
-      InvoiceAmount: [''  ],
-      TotalTax: ['' ],
+      InvoiceAmount: [''],
+      TotalTax: [''],
       TotalAmount: [''],
       Currency: [''],
-      invoiceFileName: ['']
+      invoiceFileName: [''],
+      invoiceFileBase64: ['']  
     });
   }
- 
+
   ngOnInit(): void {
     this.store.dispatch(loadInvoices());
+    this.invoices$ = this.store.pipe(select(selectInvoices));
+  }
 
-    this.invoices$ = this.store.pipe(select(selectInvoices))
-    this.invoices$.subscribe(invoices => {
-      
-    });
-  
-   }
-
-   processinvoice(invoice: InvoiceData){
-    this.router.navigate(['edit-invoice',invoice.id])
-   }
-
-   onFileChange(event: any) {
+  processinvoice(invoice: InvoiceData) {
+    this.router.navigate(['edit-invoice', invoice.id]);
+  }
+  onSubmit(){
+    console.log('Form values:', JSON.stringify(this.invoiceForm.value, null, 2));
+  }
+  onFileChange(event: any) {
     const file = event.target.files[0];
     if (file) {
       this.fileType = file.type;
@@ -64,8 +67,16 @@ export class InvoicesComponent implements OnInit {
 
       const reader = new FileReader();
       reader.onload = (e: any) => {
-        this.filePreview = this.sanitizer.bypassSecurityTrustResourceUrl(e.target.result);
-        console.log('File preview URL:', this.filePreview);
+        this.fileBase64 = e.target.result as string;
+        this.invoiceForm.patchValue({
+          invoiceFileBase64: this.fileBase64
+        });
+
+        // Ensure fileBase64 is not null before using it
+        if (this.fileBase64) {
+          this.filePreview = this.sanitizer.bypassSecurityTrustResourceUrl(this.fileBase64);
+          console.log('File preview URL:', this.filePreview);
+        }
       };
       reader.onerror = (error) => {
         console.error('File reading error:', error);
@@ -74,8 +85,8 @@ export class InvoicesComponent implements OnInit {
     } else {
       this.filePreview = null;
       this.fileType = null;
+      this.fileBase64 = null;
       console.log('No file selected.');
     }
   }
-   
 }

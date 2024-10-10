@@ -2,173 +2,192 @@
   "invoices": [
     {
       "fileName": "63fe6383-537a-4bc6-aee3-5a72a875767a.pdf",
-      "text": "                                                                                                                        Tax Invoice\nMimecast South Africa\nPost Office 67640                                                                                                                     INVSA624162\nBryanston 2021\nSouth Africa                                                                                                                                         12-Jun-2024\nVAT ID: 4650210547\n\n\n\n                                                                                                                                 Terms                Net 30\n                                                                                                                                 Due Date             12-Jul-2024\n                                                                                                                                 Currency             ZAR\nBill To                                     Ship To                                                                              PO                   0937\n ISN Managed Services Pty Ltd                Green Marketing International                                                       Billing Frequency    Monthly\n 199 Loop Street                             199 Loop Street                                                                     Contract Start Date 12-Feb-2024\n Cape Town WC 8001                           Cape Town WC 8000\n                                             South Africa                                                                        Contract End Date    11-Feb-2025\n South Africa\n VAT ID: 4870182401                                                                                                              Service Period Start 12-Jun-2024\n                                                                                                                                 Service Period End 11-Jul-2024\n\n\n\n Qty        Item                                                               SKU              Bill Rate             Amount          Tax Rate        Gross Amount\n\n 99         Mimecast S1                                                        M_S1_50_M      R35.01417              R3,466.40              15%           R3,986.36\n            Enhanced security and full protection from targeted threats such\n            as spear-phishing and whaling, plus basic data leak protection.\n\n 99         Mimecast C1                                                        M_C1_50_M      R29.17917              R2,888.74              15%           R3,322.05\n            Maintain access to email during primary system outage. Email\n            continuity with no gateway services.\n\n 99         Mimecast A1                                                        M_A1_50_M      R52.52167              R5,199.65              15%           R5,979.60\n            Journal only archiving with no gateway services.\n\n 1          Basic Support                                                      M_BSC-SP_M      R0.00000                 R0.00               15%                R0.00\n            Included with subscription, provides an online Support Portal,\n            the Mimecast Customer Community, Knowledgebase and\n            Administration Console access.\n\n\n                                                                                                                       Subtotal                         R11,554.79\n\n                                                                                                                       Tax Total                         R1,733.22\n\n                                                                                                                           Total                        R13,288.01\n\n                                                                                                                   Amount Paid                                 R0.00\n\n                                                                                                            Balance Outstanding                         R13,288.01\n\n\n\n\nFOR ACCOUNT QUERIES CONTACT:\nEmail: accounts@mimecast.co.za\nPhone: 0861 114 063\n\nRemit Payments to:\nBeneficiary Name: Mimecast South Africa (Pty) Limited\nBeneficiary Account Number: 77620699\nBeneficiary Bank: JP Morgan Chase Bank N.A. (Johannesburg branch)\nBeneficiary Bank Swift: MGTCZAJJ\nBeneficiary Bank Branch Code: 432000\n\n\n\n\nNOTE: The Services are subject to Mimecast General Terms and Conditions, a copy of which may be located             RegNo 2004/00965/07                  1 of 1\nat http://www.mimecast.com/generalterms or which have otherwise been mutually agreed by Mimecast and\nCustomer in writing.\n\f",
-      "extracted_data": {
-        "type": "Tax Invoice",
-        "FromCompany": "Mimecast South Africa",
-        "InvoiceDate": "12 Jun 2024",
-        "InvoiceNumber": "INVSA624162",
-        "DueDate": "12 Jul 2024",
-        "Reference": "67640",
-        "FormattedInvoiceDate": "12/06/24",
-        "FormattedDueDate": "12/07/24",
-        "PONumber": "0937",
-        "PaymentTerms": "Net 30",
-        "CustomerAccountNumber": "",
-        "LineItems": [
-          {
-            "description": "Mimecast S1 Enhanced security full protection targeted threats spear phishing whaling plus basic data leak protection",
-            "Quantity": "99",
-            "unitAmount": "35.01417",
-            "lineAmount": "3466.40"
-          },
-          {
-            "description": "Mimecast C1 Maintain access email primary system outage email continuity gateway services",
-            "Quantity": "99",
-            "unitAmount": "29.17917",
-            "lineAmount": "2888.74"
-          },
-          {
-            "description": "Mimecast A1 Journal archiving gateway services",
-            "Quantity": "99",
-            "unitAmount": "52.52167",
-            "lineAmount": "5199.65"
-          },
-          {
-            "description": "Basic Support Included subscription provides online support portal mimecast customer community knowledgebase administration console access",
-            "Quantity": "1",
-            "unitAmount": "0.00000",
-            "lineAmount": "0.00"
-          }
-        ],
-        "InvoiceAmount": "11554.79",
-        "TotalTax": "1733.22",
-        "TotalAmount": "13288.01",
-        "Currency": "ZAR"
-      },
-      "id": "7946"
+      "id": "7946",
+      "type": "Tax Invoice",
+      "FromCompany": "Mimecast South Africa",
+      "InvoiceDate": "2024-06-12",
+      "InvoiceNumber": "INVSA624162",
+      "DueDate": "2024-07-12",
+      "Reference": "67640",
+      "PONumber": "0937",
+      "PaymentTerms": "Net 30",
+      "CustomerAccountNumber": "",
+      "LineItems": [
+        {
+          "description": "Mimecast S1 Enhanced security and full protection from targeted threats such as spear-phishing and whaling, plus basic data leak protection",
+          "Quantity": "99",
+          "unitAmount": "35.01",
+          "lineAmount": "3466.40"
+        },
+        {
+          "description": "Mimecast C1 Maintain access to email during primary system outage. Email continuity with no gateway services",
+          "Quantity": "99",
+          "unitAmount": "29.18",
+          "lineAmount": "2888.74"
+        },
+        {
+          "description": "Mimecast A1 Journal only archiving with no gateway services",
+          "Quantity": "99",
+          "unitAmount": "52.52",
+          "lineAmount": "5199.65"
+        },
+        {
+          "description": "Basic Support Included with subscription, provides online Support Portal, the Mimecast Customer Community, Knowledgebase and Administration Console access",
+          "Quantity": "1",
+          "unitAmount": "0.00",
+          "lineAmount": "0.00"
+        }
+      ],
+      "InvoiceAmount": "11554.79",
+      "TotalTax": "1733.22",
+      "TotalAmount": "13288.01",
+      "Currency": "ZAR"
     },
     {
       "id": "0078",
-      "type": "",
-      "FromCompany": "qger",
+      "type": "Invoice",
+      "FromCompany": "Example Corp",
       "InvoiceDate": "2024-07-18",
-      "InvoiceNumber": "reg",
+      "InvoiceNumber": "REG123",
       "DueDate": "2024-07-26",
-      "Reference": "",
-      "PONumber": "gdfg",
-      "PaymentTerms": "fdgadfgdfav",
-      "CustomerAccountNumber": "",
-      "LineItems": [],
-      "InvoiceAmount": "",
-      "TotalTax": "",
-      "TotalAmount": "",
-      "Currency": ""
-    },
-    {
-      "id": "444d",
-      "type": "",
-      "FromCompany": "",
-      "InvoiceDate": "",
-      "InvoiceNumber": "",
-      "DueDate": "",
-      "Reference": "",
-      "PONumber": "",
-      "PaymentTerms": "",
-      "CustomerAccountNumber": "",
-      "LineItems": [],
-      "InvoiceAmount": "",
-      "TotalTax": "",
-      "TotalAmount": "",
-      "Currency": ""
-    },
-    {
-      "id": "b0d0",
-      "type": "wtqt",
-      "FromCompany": "rgq",
-      "InvoiceDate": "2024-08-14",
-      "InvoiceNumber": "erg",
-      "DueDate": "2024-08-07",
-      "Reference": "regr",
-      "PONumber": "reg",
-      "PaymentTerms": "reg",
-      "CustomerAccountNumber": "reger",
-      "LineItems": [],
-      "InvoiceAmount": "reg",
-      "TotalTax": "erger",
-      "TotalAmount": "ereger",
-      "Currency": "reg"
-    },
-    {
-      "id": "e134",
-      "type": "fqwe",
-      "FromCompany": "ewqwqf",
-      "InvoiceDate": "2024-08-16",
-      "InvoiceNumber": "wefweq",
-      "DueDate": "2024-08-15",
-      "Reference": "wefwq",
-      "PONumber": "ewf",
-      "PaymentTerms": "ewqf",
-      "CustomerAccountNumber": "weqfwe",
-      "LineItems": null,
-      "InvoiceAmount": "fweqf",
-      "TotalTax": "ewqfewq",
-      "TotalAmount": "fwqefqw",
-      "Currency": "fq"
+      "Reference": "PO123",
+      "PONumber": "PO123",
+      "PaymentTerms": "Net 30",
+      "CustomerAccountNumber": "ACC456",
+      "LineItems": [
+        {
+          "description": "Service Charge",
+          "Quantity": "1",
+          "unitAmount": "150.00",
+          "lineAmount": "150.00"
+        }
+      ],
+      "InvoiceAmount": "150.00",
+      "TotalTax": "22.50",
+      "TotalAmount": "172.50",
+      "Currency": "USD"
     },
     {
       "id": "4bde",
-      "type": "regqg",
-      "FromCompany": "rqgfsa",
+      "type": "Invoice",
+      "FromCompany": "Tech Solutions",
       "InvoiceDate": "2024-08-14",
-      "InvoiceNumber": "dsag",
+      "InvoiceNumber": "TS789",
       "DueDate": "2024-08-02",
-      "Reference": "dsa",
-      "PONumber": "dsafs",
-      "PaymentTerms": "sads",
-      "CustomerAccountNumber": "dsa",
-      "LineItems": [],
-      "InvoiceAmount": "dsfaas",
-      "TotalTax": "sdf",
-      "TotalAmount": "sadfs",
-      "Currency": "dfas"
+      "Reference": "REF789",
+      "PONumber": "PO456",
+      "PaymentTerms": "Net 15",
+      "CustomerAccountNumber": "ACC789",
+      "LineItems": [
+        {
+          "description": "Consulting Services",
+          "Quantity": "5",
+          "unitAmount": "200.00",
+          "lineAmount": "1000.00"
+        }
+      ],
+      "InvoiceAmount": "1000.00",
+      "TotalTax": "150.00",
+      "TotalAmount": "1150.00",
+      "Currency": "USD"
     },
     {
       "id": "acaa",
-      "type": "sfaf",
-      "FromCompany": "sadf",
+      "type": "Invoice",
+      "FromCompany": "Global Enterprises",
       "InvoiceDate": "2024-08-06",
-      "InvoiceNumber": "dsaf",
+      "InvoiceNumber": "GE123",
       "DueDate": "2024-08-07",
-      "Reference": "sdfadf",
-      "PONumber": "sa",
-      "PaymentTerms": "sa",
-      "CustomerAccountNumber": "sda",
-      "LineItems": null,
-      "InvoiceAmount": "sf",
-      "TotalTax": "sdf",
-      "TotalAmount": "ds",
-      "Currency": "sda"
+      "Reference": "REF123",
+      "PONumber": "PO789",
+      "PaymentTerms": "Net 30",
+      "CustomerAccountNumber": "ACC123",
+      "LineItems": [
+        {
+          "description": "Product Sales",
+          "Quantity": "10",
+          "unitAmount": "50.00",
+          "lineAmount": "500.00"
+        }
+      ],
+      "InvoiceAmount": "500.00",
+      "TotalTax": "75.00",
+      "TotalAmount": "575.00",
+      "Currency": "USD"
     },
     {
-      "id": "a7f7",
-      "type": "ewfw",
-      "FromCompany": "",
-      "InvoiceDate": "2024-08-14",
-      "InvoiceNumber": "wef",
-      "DueDate": "",
-      "Reference": "ew",
-      "PONumber": "ew",
-      "PaymentTerms": "ewf",
-      "CustomerAccountNumber": "ewfe",
-      "LineItems": [],
-      "InvoiceAmount": "ewf",
-      "TotalTax": "ewf",
-      "TotalAmount": "ewf",
-      "Currency": "ewf"
+      "id": "17fb",
+      "type": "Invoice",
+      "FromCompany": "Global Enterprises",
+      "InvoiceDate": "2024-08-06",
+      "InvoiceNumber": "GE123",
+      "DueDate": "2024-08-07",
+      "Reference": "REF123",
+      "PONumber": "PO789",
+      "PaymentTerms": "Net 30",
+      "CustomerAccountNumber": "ACC123",
+      "LineItems": [
+        {
+          "description": "Product Sales",
+          "Quantity": "10",
+          "unitAmount": "50.00",
+          "lineAmount": "500.00"
+        }
+      ],
+      "InvoiceAmount": "500.00",
+      "TotalTax": "75.00",
+      "TotalAmount": "575.00",
+      "Currency": "USD"
+    },
+    {
+      "id": "1fe4",
+      "type": "Invoice",
+      "FromCompany": "Global Enterprises",
+      "InvoiceDate": "2024-08-06",
+      "InvoiceNumber": "GE123",
+      "DueDate": "2024-08-07",
+      "Reference": "REF123",
+      "PONumber": "PO789",
+      "PaymentTerms": "Net 30",
+      "CustomerAccountNumber": "ACC123",
+      "LineItems": [
+        {
+          "description": "Product Sales",
+          "Quantity": "10",
+          "unitAmount": "50.00",
+          "lineAmount": "500.00"
+        }
+      ],
+      "InvoiceAmount": "500.00",
+      "TotalTax": "75.00",
+      "TotalAmount": "575.00",
+      "Currency": "USD"
+    },
+    {
+      "id": "a87e",
+      "type": "Invoice",
+      "FromCompany": "Global Enterprises",
+      "InvoiceDate": "2024-08-06",
+      "InvoiceNumber": "GE123",
+      "DueDate": "2024-08-07",
+      "Reference": "REF123",
+      "PONumber": "PO789",
+      "PaymentTerms": "Net 30",
+      "CustomerAccountNumber": "ACC123",
+      "LineItems": [
+        {
+          "description": "Product Sales",
+          "Quantity": "10",
+          "unitAmount": "50.00",
+          "lineAmount": "500.00"
+        }
+      ],
+      "InvoiceAmount": "500.00",
+      "TotalTax": "75.00",
+      "TotalAmount": "575.00",
+      "Currency": "USD"
     }
   ],
-
   "suppliers": [
     {
       "SupplierName": "Mimecast South Africa",
@@ -185,7 +204,8 @@
       "payment_terms": "Net 30",
       "alias": "Mimecast",
       "NotesAI_Invoices": "Invoice details included.",
-      "url": "http://example.com/supplier/mimecast-south-africa"
+      "url": "http://example.com/supplier/mimecast-south-africa",
+      "id": "b34e"
     },
     {
       "SupplierName": "Acme Corp",
@@ -202,7 +222,8 @@
       "payment_terms": "fdgadfgdfav",
       "alias": "Acme",
       "NotesAI_Invoices": null,
-      "url": "http://example.com/supplier/acme-corp"
+      "url": "http://example.com/supplier/acme-corp",
+      "id": "eaa3"
     },
     {
       "SupplierName": "Globex Corporation",
@@ -219,7 +240,8 @@
       "payment_terms": "reg",
       "alias": "Globex",
       "NotesAI_Invoices": null,
-      "url": "http://example.com/supplier/globex-corporation"
+      "url": "http://example.com/supplier/globex-corporation",
+      "id": "9365"
     },
     {
       "SupplierName": "Umbrella Inc.",
@@ -236,7 +258,8 @@
       "payment_terms": "ewqf",
       "alias": "Umbrella",
       "NotesAI_Invoices": null,
-      "url": "http://example.com/supplier/umbrella-inc"
+      "url": "http://example.com/supplier/umbrella-inc",
+      "id": "6a7a"
     },
     {
       "SupplierName": "Initech",
@@ -253,7 +276,8 @@
       "payment_terms": "sads",
       "alias": "Initech",
       "NotesAI_Invoices": null,
-      "url": "http://example.com/supplier/initech"
+      "url": "http://example.com/supplier/initech",
+      "id": "d0bb"
     },
     {
       "SupplierName": "TechCorp",
@@ -270,7 +294,8 @@
       "payment_terms": "sa",
       "alias": "TechCorp",
       "NotesAI_Invoices": null,
-      "url": "http://example.com/supplier/techcorp"
+      "url": "http://example.com/supplier/techcorp",
+      "id": "61d7"
     },
     {
       "SupplierName": "Cyberdyne Systems",
@@ -287,7 +312,208 @@
       "payment_terms": "ewf",
       "alias": "Cyberdyne",
       "NotesAI_Invoices": null,
-      "url": "http://example.com/supplier/cyberdyne-systems"
+      "url": "http://example.com/supplier/cyberdyne-systems",
+      "id": "18c0"
+    }
+  ],
+  "PurchaseOrders": [
+    {
+      "AttentionTo": "Procurement Department",
+      "BrandingThemeID": "11111111-aaaa-1111-aaaa-111111111111",
+      "Contact": {
+        "Addresses": [
+          {
+            "AddressLine1": "123 Main St",
+            "AddressLine2": "Suite 100",
+            "AddressType": "POBOX",
+            "City": "Springfield",
+            "Country": "USA",
+            "PostalCode": "12345",
+            "Region": "Illinois"
+          },
+          {
+            "AddressLine1": "456 Elm St",
+            "AddressLine2": "Apt 2B",
+            "AddressType": "STREET",
+            "City": "Springfield",
+            "Country": "USA",
+            "PostalCode": "67890",
+            "Region": "Illinois"
+          }
+        ],
+        "ContactGroups": [],
+        "ContactID": "22222222-bbbb-2222-bbbb-222222222222",
+        "ContactPersons": [],
+        "ContactStatus": "ACTIVE",
+        "DefaultCurrency": "USD",
+        "FirstName": "John",
+        "HasAttachments": false,
+        "HasValidationErrors": false,
+        "LastName": "Doe",
+        "Name": "Doe Electronics Inc.",
+        "Phones": [
+          {
+            "PhoneAreaCode": "555",
+            "PhoneNumber": "1234567",
+            "PhoneType": "DEFAULT"
+          }
+        ],
+        "UpdatedDateUTC": "/Date(1721225519020+0000)/"
+      },
+      "CurrencyCode": "USD",
+      "CurrencyRate": 1,
+      "Date": "/Date(1704931200000)/",
+      "DeliveryAddress": "789 Oak St\nSpringfield\nIllinois\n12345\n",
+      "DeliveryDate": "/Date(1705017600000)/",
+      "DeliveryInstructions": "Please deliver to the loading dock.",
+      "HasAttachments": true,
+      "LineAmountTypes": "Exclusive",
+      "LineItems": [
+        {
+          "AccountCode": "3011001",
+          "Description": "15-inch Laptop",
+          "LineAmount": 1200,
+          "LineItemID": "33333333-cccc-3333-cccc-333333333333",
+          "Quantity": 10,
+          "TaxAmount": 180,
+          "TaxType": "INPUT",
+          "Tracking": [
+            {
+              "Name": "Category",
+              "Option": "Electronics",
+              "TrackingCategoryID": "44444444-dddd-4444-dddd-444444444444"
+            }
+          ],
+          "UnitAmount": 120
+        },
+        {
+          "AccountCode": "3011002",
+          "Description": "Wireless Mouse",
+          "LineAmount": 500,
+          "LineItemID": "55555555-eeee-5555-eeee-555555555555",
+          "Quantity": 50,
+          "TaxAmount": 75,
+          "TaxType": "INPUT",
+          "Tracking": [
+            {
+              "Name": "Category",
+              "Option": "Accessories",
+              "TrackingCategoryID": "66666666-ffff-6666-ffff-666666666666"
+            }
+          ],
+          "UnitAmount": 10
+        }
+      ],
+      "PurchaseOrderID": "77777777-aaaa-7777-aaaa-777777777777",
+      "PurchaseOrderNumber": "001",
+      "Reference": "Invoice # 12345",
+      "SentToContact": true,
+      "Status": "APPROVED",
+      "SubTotal": 1700,
+      "Telephone": "1-555-123-4567",
+      "Total": 1955,
+      "TotalTax": 255,
+      "UpdatedDateUTC": "/Date(1705042148050+0000)/",
+      "id": "9b22"
+    },
+    {
+      "AttentionTo": "Logistics Department",
+      "BrandingThemeID": "88888888-aaaa-8888-aaaa-888888888888",
+      "Contact": {
+        "Addresses": [
+          {
+            "AddressLine1": "98 Center Rd",
+            "AddressLine2": "Industrial Park",
+            "AddressType": "POBOX",
+            "City": "River City",
+            "Country": "USA",
+            "PostalCode": "54321",
+            "Region": "California"
+          },
+          {
+            "AddressLine1": "76 Hill St",
+            "AddressLine2": "",
+            "AddressType": "STREET",
+            "City": "River City",
+            "Country": "USA",
+            "PostalCode": "67890",
+            "Region": "California"
+          }
+        ],
+        "ContactGroups": [],
+        "ContactID": "99999999-bbbb-9999-bbbb-999999999999",
+        "ContactPersons": [],
+        "ContactStatus": "ACTIVE",
+        "DefaultCurrency": "USD",
+        "FirstName": "Jane",
+        "HasAttachments": false,
+        "HasValidationErrors": false,
+        "LastName": "Smith",
+        "Name": "Smith Transport Services",
+        "Phones": [
+          {
+            "PhoneAreaCode": "555",
+            "PhoneNumber": "9876543",
+            "PhoneType": "DEFAULT"
+          }
+        ],
+        "UpdatedDateUTC": "/Date(1721225519020+0000)/"
+      },
+      "CurrencyCode": "USD",
+      "CurrencyRate": 1,
+      "Date": "/Date(1704931200000)/",
+      "DeliveryAddress": "101 High St\nRiver City\nCalifornia\n54321\n",
+      "DeliveryDate": "/Date(1705017600000)/",
+      "DeliveryInstructions": "Deliver to the warehouse entrance.",
+      "HasAttachments": true,
+      "LineAmountTypes": "Exclusive",
+      "LineItems": [
+        {
+          "AccountCode": "4011001",
+          "Description": "Flat-screen Monitor",
+          "LineAmount": 500,
+          "LineItemID": "aaaaaaaa-bbbb-aaaa-bbbb-aaaaaaaaaaaa",
+          "Quantity": 20,
+          "TaxAmount": 75,
+          "TaxType": "INPUT",
+          "Tracking": [
+            {
+              "Name": "Category",
+              "Option": "Electronics",
+              "TrackingCategoryID": "bbbbbbbb-cccc-bbbb-cccc-bbbbbbbbbbbb"
+            }
+          ],
+          "UnitAmount": 25
+        },
+        {
+          "AccountCode": "4011002",
+          "Description": "USB Cable Pack",
+          "LineAmount": 150,
+          "LineItemID": "cccccccc-dddd-cccc-dddd-cccccccccccc",
+          "Quantity": 30,
+          "TaxAmount": 22.5,
+          "TaxType": "INPUT",
+          "Tracking": [
+            {
+              "Name": "Category",
+              "Option": "Accessories",
+              "TrackingCategoryID": "dddddddd-eeee-dddd-eeee-dddddddddddd"
+            }
+          ],
+          "UnitAmount": 5
+        }
+      ],
+      "PurchaseOrderID": "eeeeeeee-aaaa-eeee-aaaa-eeeeeeeeeeee",
+      "PurchaseOrderNumber": "002",
+      "Reference": "Invoice # 67890",
+      "SentToContact": true,
+      "Status": "BILLED",
+      "SubTotal": 650,
+      "Telephone": "1-555-987-6543",
+      "Total": 747.5,
+      "TotalTax": 97.5,
+      "UpdatedDateUTC": "/Date(1705042148050+0000)/",
+      "id": "d60d"
     }
   ]
 }
